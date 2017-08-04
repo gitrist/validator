@@ -5,23 +5,23 @@
 	var __DEFS__={
 			trigger:"change"
 		},
-		__RULE__={
-			notempty:function(){
-				return this.val()!=""&&this.val()!=null;
-			},
-			regexp:function(){
-				return new RegExp(this.data("lw-regexp")).test(this.val());
-			},
-			stringlength:function(){
-				return this.val().length>=this.data("lw-stringlength-min")&&this.val().length<=this.data("lw-stringlength-max");
-			},
-			different:function(){
-				return this.val()!=$("[name=username]").val();
-			},
-			identical:function(){
-				return this.val()!=$("[name=password]").val();
-			}
-		};
+	    __RULE__={
+		notempty:function(){
+			return this.val()!=""&&this.val()!=null;
+		},
+		regexp:function(){
+			return new RegExp(this.data("lw-regexp")).test(this.val());
+		},
+		stringlength:function(){
+			return this.val().length>=this.data("lw-stringlength-min")&&this.val().length<=this.data("lw-stringlength-max");
+		},
+		different:function(){
+			return this.val()!=$("[name=username]").val();
+		},
+		identical:function(){
+			return this.val()!=$("[name=password]").val();
+		}
+	};
 	//表单验证插件封装
 	$.fn[name] = function(options){
 		//继承
